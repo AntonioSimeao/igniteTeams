@@ -1,4 +1,4 @@
-import {  StatusBar } from "react-native";
+import { StatusBar } from "react-native";
 import { ThemeProvider } from "styled-components";
 import {
   useFonts,
@@ -15,8 +15,8 @@ export default function App() {
   return (
     // Se as fontes carregarem, vai mostrar o Groups, se não, vai mostrar um loading
     <ThemeProvider theme={theme}>
-      <StatusBar barStyle="light-content" />
-      {!fontsLoaded ? <Groups /> : <Loading />}
+      <StatusBar barStyle="light-content"/>
+      {fontsLoaded ? <Groups /> : <Loading />}
     </ThemeProvider>
   );
 }
