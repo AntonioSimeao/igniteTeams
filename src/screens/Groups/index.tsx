@@ -7,7 +7,6 @@ import { useState } from "react";
 import { FlatList } from "react-native";
 import { Container } from "./styles";
 
-
 export function Groups() {
   const [groups, setGroups] = useState<string[]>([]);
   return (
@@ -20,11 +19,9 @@ export function Groups() {
         renderItem={({ item }) => <GroupCard title={item} />}
         contentContainerStyle={groups.length === 0 && { flex: 1 }}
         ListEmptyComponent={() => <ListEmpty message="Cadastre uma turma" />}
-        
+        showsVerticalScrollIndicator={false}
       />
-      <Button
-      title="Criar nova turma"
-      />
+      <Button title="Criar nova turma" />
     </Container>
   );
 }
