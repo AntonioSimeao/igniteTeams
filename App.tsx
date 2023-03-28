@@ -8,6 +8,7 @@ import {
 import { Groups } from "@screens/Groups";
 import theme from "./src/theme/index";
 import { Loading } from "@components/Loading";
+import { Routes } from "./src/routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -16,7 +17,7 @@ export default function App() {
     // Se as fontes carregarem, vai mostrar o Groups, se não, vai mostrar um loading
     <ThemeProvider theme={theme}>
       <StatusBar barStyle="light-content" translucent />
-      {fontsLoaded ? <Groups /> : <Loading />}
+      {fontsLoaded ? <Routes /> : <Loading />}
     </ThemeProvider>
   );
 }

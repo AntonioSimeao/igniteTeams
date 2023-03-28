@@ -9,6 +9,7 @@ export const Title = styled.Text`
   ${({ theme }) => css`
     font-size: ${theme.FONT_SIZE.XL}px;
     font-family: ${theme.FONT_FAMILY.BOLD};
+    color: ${theme.COLORS.WHITE};
   `}
   text-align: center;
 `;
